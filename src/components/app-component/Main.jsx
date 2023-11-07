@@ -8,7 +8,7 @@ import { Levels } from "./Levels";
 
 export const Main = () => {
   const [picture, setPicture] = useState(
-    places[Math.floor(Math.random() * places.length)]
+    places[9]
   );
 
   const [clicked, setClicked] = useState(false);
