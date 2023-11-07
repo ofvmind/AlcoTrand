@@ -12,6 +12,7 @@ import PorterAkadem from "../../images/places/PorterAkademgorodok.jpg";
 
 //Музика
 import musicTest from "../../music/places/test.mp3";
+import musicBorschagovka from "../../music/places/Borschagovka.mp3";
 import musicVyshnya from "../../music/places/Vyshnya.mp3";
 import musicVidradniy from "../../music/places/Vidradniy.mp3";
 import PorterAkademgorodok from "../../music/places/PorterAkadem.mp3";
@@ -39,7 +40,7 @@ export const drinkSets_light = [
 ];
 
 export const places = [
-  { id: 1, place: "Борщагівка", image: borschagovka, music: musicTest },
+  { id: 1, place: "Борщагівка", image: borschagovka, music: musicBorschagovka },
   { id: 2, place: "Відрадний", image: vidredniy, music: musicVidradniy },
   { id: 3, place: "Вишневе", image: vyshneve, music: musicVyshnya },
   { id: 4, place: "Легенда ФК", image: FC, music: musicTest },
