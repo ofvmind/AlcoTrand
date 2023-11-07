@@ -12,7 +12,6 @@ export const Main = () => {
   );
 
   const [clicked, setClicked] = useState(false);
-  const [offer, setOffer] = useState(false);
   const [level, setLevel] = useState("random");
   const [button, setButton] = useState("Гоу");
 
@@ -28,7 +27,6 @@ export const Main = () => {
       let intr = setInterval(() => {
         setPicture(places[Math.floor(Math.random() * places.length)]);
       }, 2000);
-      let intr2 = setInterval(() => {}, 1500);
       setTimeout(() => {
         setClicked(false);
         clearInterval(intr);
