@@ -24,6 +24,9 @@ body {
   margin: 0 auto;
   background-image: url(./images/places/borschagovka.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: .5s;
   animation: appearance .5s;
   z-index: -999;
 }
@@ -49,7 +52,7 @@ body {
 }
 
 .current {
-  color: #000;
+  color: indianred;
 }
 
 .place-drink {

@@ -14,6 +14,7 @@ import PorterAkadem from "../../images/places/PorterAkademgorodok.jpg";
 import musicTest from "../../music/places/test.mp3";
 import musicVyshnya from "../../music/places/Vyshnya.mp3";
 import musicVidradniy from "../../music/places/Vidradniy.mp3";
+import PorterAkademgorodok from "../../music/places/PorterAkadem.mp3";
 
 export const drinkSets_heavy = [
   "Джин",
@@ -47,5 +48,5 @@ export const places = [
   { id: 7, place: "ГідроПарк", image: Gidropark, music: musicTest },
   { id: 8, place: "Поляна", image: Polyana, music: musicTest },
   { id: 9, place: "Бар79", image: TayneMisce, music: musicTest },
-  { id: 10, place: "Портер Академ", image: PorterAkadem, music: musicTest }
+  { id: 10, place: "Портер", image: PorterAkadem, music: PorterAkademgorodok }
 ];

@@ -10,7 +10,7 @@ export const Main = () => {
     places[Math.floor(Math.random() * places.length)]
   );
 
-  const [display, setDisplay] = useState("initial");
+
   const [clicked, setClicked] = useState(false);
   const [offer, setOffer] = useState(false);
   const [level, setLevel] = useState("random");
@@ -25,7 +25,6 @@ export const Main = () => {
     if (button === "Гоу") {
       setClicked(true);
       start();
-      setTimeout(() => setDisplay("initial"), 2000);
       let intr = setInterval(() => {
         setPicture(places[Math.floor(Math.random() * places.length)]);
       }, 2000);
@@ -50,12 +49,7 @@ export const Main = () => {
       <div
         className="app-background"
         style={{
-          transition: ".5s",
-          display,
           backgroundImage: `url(${picture.image})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       />
       <div className="wrapper">
