@@ -115,7 +115,7 @@ export const Main = () => {
             <>
               <div className="levels">
                 <p
-                  className={level === "light" ? "current" : ""}
+                  className={level === "light" && "current" }
                   onClick={() => {
                     clickAudio();
                     setLevel("light");
@@ -124,7 +124,7 @@ export const Main = () => {
                   Light
                 </p>
                 <p
-                  className={level === "heavy" ? "current" : ""}
+                  className={level === "heavy" && "current" }
                   onClick={() => {
                     clickAudio();
                     setLevel("heavy");
@@ -133,7 +133,7 @@ export const Main = () => {
                   Heavy
                 </p>
                 <p
-                  className={level === "random" ? "current" : ""}
+                  className={level === "random" && "current"}
                   onClick={() => {
                     clickAudio();
                     setLevel("random");

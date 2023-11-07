@@ -1,12 +1,12 @@
 //Місця
 import borschagovka from "../../images/places/borschagovka.jpg";
 import vidredniy from "../../images/places/otradniy.jpg";
-import vyshneve from "../../images/places/vyshneve.webp";
+import vyshneve from "../../images/places/vyshneve.jpg";
 import FC from "../../images/places/FC.jpg";
 import Chreschatik from "../../images/places/Chreschatik.jpg";
 import Sovki from "../../images/places/SquareSovki.jpg";
 import Gidropark from "../../images/places/Gidropark.png";
-import Polyana from "../../images/places/Polyana.png";
+import Polyana from "../../images/places/Polyana.jpeg";
 import TayneMisce from "../../images/places/BarVernadskogo79.jpg";
 import PorterAkadem from "../../images/places/PorterAkademgorodok.jpg";
 
@@ -46,6 +46,6 @@ export const places = [
   { id: 6, place: "Парк Совки", image: Sovki, music: musicTest },
   { id: 7, place: "ГідроПарк", image: Gidropark, music: musicTest },
   { id: 8, place: "Поляна", image: Polyana, music: musicTest },
-  { id: 9, place: "Бар79", image: TayneMisce },
-  { id: 10, place: "Портер Академ", image: PorterAkadem }
+  { id: 9, place: "Бар79", image: TayneMisce, music: musicTest },
+  { id: 10, place: "Портер Академ", image: PorterAkadem, music: musicTest }
 ];
