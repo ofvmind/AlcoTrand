@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { drinkSets_light, drinkSets_heavy, places } from "./places/places";
-import music from "../music/loading2.mp3";
-import clickSound from "../music/click/click.mp3";
-import { StartButton } from "./UI/StartButton/StartButton";
-import { Loader } from "./UI/Loader/Loader";
+import { drinkSets_light, drinkSets_heavy, places } from "../places/places";
+import music from "../../music/loading2.mp3";
+import clickSound from "../../music/click/click.mp3";
+import { StartButton } from "../UI/StartButton/StartButton";
+import { Loader } from "../UI/Loader/Loader";
+import { Levels } from "./Levels";
 
 export const Main = () => {
   const [picture, setPicture] = useState(
     places[Math.floor(Math.random() * places.length)]
   );
-
 
   const [clicked, setClicked] = useState(false);
   const [offer, setOffer] = useState(false);
@@ -107,36 +107,7 @@ export const Main = () => {
             </>
           ) : (
             <>
-              <div className="levels">
-                <p
-                  className={level === "light" && "current" }
-                  onClick={() => {
-                    clickAudio();
-                    setLevel("light");
-                  }}
-                >
-                  Light
-                </p>
-                <p
-                  className={level === "heavy" && "current" }
-                  onClick={() => {
-                    clickAudio();
-                    setLevel("heavy");
-                  }}
-                >
-                  Heavy
-                </p>
-                <p
-                  className={level === "random" && "current"}
-                  onClick={() => {
-                    clickAudio();
-                    setLevel("random");
-                  }}
-                >
-                  Random
-                </p>
-              </div>
-              <StartButton onClick={() => Loading()}>{button}</StartButton>
+              <Levels level={level} setLevel={setLevel} clickAudio={clickAudio} Loading={Loading} button={button}/>
             </>
           )}
         </div>
