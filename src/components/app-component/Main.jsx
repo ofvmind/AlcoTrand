@@ -1,19 +1,28 @@
 import { useState } from "react";
-import { drinkSets_light, drinkSets_heavy, places, alco } from "../places/places";
+import {
+  drinkSets_light,
+  drinkSets_heavy,
+  places,
+  alco,
+} from "../places/places";
 import music from "../../music/loading2.mp3";
 import clickSound from "../../music/click/click.mp3";
 import { StartButton } from "../UI/StartButton/StartButton";
 import { Loader } from "../UI/Loader/Loader";
 import { Levels } from "./Levels";
+import { Modal } from "../UI/Modal/Modal";
+import { v4 } from "uuid";
+import defaultImagePlace from "../../images/places/1646943847_3-abrakadabra-fun-p-oboi-na-telefon-s-alkogolem-4.jpg";
+import { OptionsBar } from "./OptionsBar";
 
 export const Main = () => {
-  const [picture, setPicture] = useState(
-    places[9]
-  );
+  const [picture, setPicture] = useState(places[9]);
 
   const [clicked, setClicked] = useState(false);
   const [level, setLevel] = useState("random");
   const [button, setButton] = useState("Гоу");
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [ownPlace, setOwnPlace] = useState("");
 
   function clickAudio() {
     const audio = new Audio(clickSound);
@@ -46,31 +55,47 @@ export const Main = () => {
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
   }
   const randomAlco = (isHard) => {
-    const h = isHard ? alco.length - 1: alco.length / 2;
-    const r = {}
+    const h = isHard ? alco.length - 1 : alco.length / 2;
+    const r = {};
     for (let i = 0; i < 1000; i++) {
-      const res = getRandomIntInclusive(0, h)
-      if(r[res]) {
+      const res = getRandomIntInclusive(0, h);
+      if (r[res]) {
         r[res]++;
-      } else r[res] = 1
+      } else r[res] = 1;
     }
-    let k = ''
+    let k = "";
     let m = 0;
     console.log(r);
-    for(const key in r) {
+    for (const key in r) {
       console.log(key);
-      if(m < r[key]) {
-        m = r[key]
-        k = key
+      if (m < r[key]) {
+        m = r[key];
+        k = key;
       }
     }
     console.log(k);
     console.log(m);
     console.log(level);
-    return alco[k]
-  }
+    return alco[k];
+  };
+
+  const addPlace = () => {
+    if (ownPlace) {
+      places.push({
+        id: v4(),
+        image: defaultImagePlace,
+        place: ownPlace,
+      });
+
+      setOwnPlace("");
+    }
+  };
+
   return (
     <>
+      <Modal visible={modalIsOpen} setVisible={setModalIsOpen}>
+        <OptionsBar place={ownPlace} setPlace={setOwnPlace} add={addPlace} />
+      </Modal>
       <div
         className="app-background"
         style={{
@@ -78,6 +103,7 @@ export const Main = () => {
         }}
       />
       <div className="wrapper">
+        {!clicked && <button class="options" onClick={() => setModalIsOpen(true)}>ОпціЇ</button>}
         <div className="center">
           {clicked ? (
             <>
@@ -92,31 +118,14 @@ export const Main = () => {
               <h1 className="place-drink">
                 {level === "random" ? (
                   <>
-                    <p>
-                      {
-                       randomAlco()
-                      }
-                       {' '}та 
-                    </p>
+                    <p>{randomAlco()} та</p>
                     &nbsp;
-                    <p>
-                      {
-                       randomAlco(true)
-                      }
-                    </p>
+                    <p>{randomAlco(true)}</p>
                   </>
                 ) : level === "light" ? (
-                  <>
-                    {
-                      randomAlco()
-                    }
-                  </>
+                  <>{randomAlco()}</>
                 ) : (
-                  <p>
-                    {
-                       randomAlco(true)
-                    }
-                  </p>
+                  <p>{randomAlco(true)}</p>
                 )}
               </h1>
               <h1 className="place-title">{picture.place}</h1>
@@ -124,7 +133,13 @@ export const Main = () => {
             </>
           ) : (
             <>
-              <Levels level={level} setLevel={setLevel} clickAudio={clickAudio} Loading={Loading} button={button}/>
+              <Levels
+                level={level}
+                setLevel={setLevel}
+                clickAudio={clickAudio}
+                Loading={Loading}
+                button={button}
+              />
             </>
           )}
         </div>
