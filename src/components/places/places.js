@@ -19,6 +19,29 @@ import musicVidradniy from "../../music/places/Vidradniy.mp3";
 import musicPorterAkademgorodok from "../../music/places/PorterAkadem.mp3";
 import musicPolyana from "../../music/places/Polyana.mp3";
 
+export const alco = [
+  "Пиво",
+  "Шоти",
+  "Shake",
+  "Вино",
+  "Сидр",
+  "Джин Тоник",
+  'Крепкое пиво',
+  "Ель",
+  "Шейк",
+  'Ликер',
+  "Джин",
+  "Зубровка", 
+  "Revo",
+  "Самбука",
+  "Водка", 
+  "Абсент",
+  "Віскі",
+  "Скотч",
+  "Самогон",
+  "Коньяк", 
+]
+
 export const drinkSets_heavy = [
   "Джин",
   "Самбука",
@@ -45,11 +68,11 @@ export const places = [
   { id: 1, place: "Борщагівка", image: borschagovka, music: musicBorschagovka },
   { id: 2, place: "Відрадний", image: vidredniy, music: musicVidradniy },
   { id: 3, place: "Вишневе", image: vyshneve, music: musicVyshnya },
-  { id: 4, place: "Легенда ФК", image: FC, music: musicFc },
-  { id: 5, place: "Центр", image: Chreschatik, music: musicTest },
-  { id: 6, place: "Парк Совки", image: Sovki, music: musicTest },
-  { id: 7, place: "ГідроПарк", image: Gidropark, music: musicTest },
-  { id: 8, place: "Поляна", image: Polyana, music: musicPolyana },
-  { id: 9, place: "Бар79", image: TayneMisce, music: musicTest },
-  { id: 10, place: "Портер", image: PorterAkadem, music: musicPorterAkademgorodok }
+  { id: 4, place: "Парк Совки", image: Sovki, music: musicTest },
+  { id: 5, place: "Легенда ФК", image: FC, music: musicFc },
+  { id: 6, place: "Портер", image: PorterAkadem, music: musicPorterAkademgorodok },
+  { id: 7, place: "Бар79", image: TayneMisce, music: musicTest },
+  { id: 8, place: "Центр", image: Chreschatik, music: musicTest },
+  { id: 9, place: "ГідроПарк", image: Gidropark, music: musicTest },
+  { id: 10, place: "Поляна", image: Polyana, music: musicPolyana },
 ];

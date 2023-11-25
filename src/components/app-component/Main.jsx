@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { drinkSets_light, drinkSets_heavy, places } from "../places/places";
+import { drinkSets_light, drinkSets_heavy, places, alco } from "../places/places";
 import music from "../../music/loading2.mp3";
 import clickSound from "../../music/click/click.mp3";
 import { StartButton } from "../UI/StartButton/StartButton";
@@ -42,6 +42,33 @@ export const Main = () => {
     audio.autoplay = true;
   }
 
+  function getRandomIntInclusive(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
+  const randomAlco = (isHard) => {
+    const h = isHard ? alco.length - 1: alco.length / 2;
+    const r = {}
+    for (let i = 0; i < 1000; i++) {
+      const res = getRandomIntInclusive(0, h)
+      if(r[res]) {
+        r[res]++;
+      } else r[res] = 1
+    }
+    let k = ''
+    let m = 0;
+    console.log(r);
+    for(const key in r) {
+      console.log(key);
+      if(m < r[key]) {
+        m = r[key]
+        k = key
+      }
+    }
+    console.log(k);
+    console.log(m);
+    console.log(level);
+    return alco[k]
+  }
   return (
     <>
       <div
@@ -67,35 +94,27 @@ export const Main = () => {
                   <>
                     <p>
                       {
-                        drinkSets_light[
-                          Math.floor(Math.random() * drinkSets_light.length)
-                        ]
-                      }{" "}
-                      та
+                       randomAlco()
+                      }
+                       {' '}та 
                     </p>
                     &nbsp;
                     <p>
                       {
-                        drinkSets_heavy[
-                          Math.floor(Math.random() * drinkSets_heavy.length)
-                        ]
+                       randomAlco(true)
                       }
                     </p>
                   </>
                 ) : level === "light" ? (
                   <>
                     {
-                      drinkSets_light[
-                        Math.floor(Math.random() * drinkSets_light.length)
-                      ]
+                      randomAlco()
                     }
                   </>
                 ) : (
                   <p>
                     {
-                      drinkSets_heavy[
-                        Math.floor(Math.random() * drinkSets_heavy.length)
-                      ]
+                       randomAlco(true)
                     }
                   </p>
                 )}
