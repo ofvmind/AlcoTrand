@@ -1,7 +1,5 @@
 import { useState } from "react";
 import {
-  drinkSets_light,
-  drinkSets_heavy,
   places,
   alco,
 } from "../places/places";
@@ -13,6 +11,7 @@ import { Levels } from "./Levels";
 import { Modal } from "../UI/Modal/Modal";
 import { v4 } from "uuid";
 import defaultImagePlace from "../../images/places/1646943847_3-abrakadabra-fun-p-oboi-na-telefon-s-alkogolem-4.jpg";
+import defaultMusicPlace from "../../music/places/default.mp3";
 import { OptionsBar } from "./OptionsBar";
 
 export const Main = () => {
@@ -51,33 +50,41 @@ export const Main = () => {
     audio.autoplay = true;
   }
 
+  const randomAlco = (hard) => {
+    let alcoSet = [];
+    if (hard)  alcoSet = alco.filter(item => item.strength === "hard");
+    else alcoSet = alco.filter(item => item.strength === "light");
+    return alcoSet[getRandomIntInclusive(0, alcoSet.length)].name;
+  };
+
   function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
   }
-  const randomAlco = (isHard) => {
-    const h = isHard ? alco.length - 1 : alco.length / 2;
-    const r = {};
-    for (let i = 0; i < 1000; i++) {
-      const res = getRandomIntInclusive(0, h);
-      if (r[res]) {
-        r[res]++;
-      } else r[res] = 1;
-    }
-    let k = "";
-    let m = 0;
-    console.log(r);
-    for (const key in r) {
-      console.log(key);
-      if (m < r[key]) {
-        m = r[key];
-        k = key;
-      }
-    }
-    console.log(k);
-    console.log(m);
-    console.log(level);
-    return alco[k];
-  };
+
+  //const randomAlco = (isHard) => {
+    //const h = isHard ? alco.length - 1 : alco.length / 2;
+    //const r = {};
+    //for (let i = 0; i < 1000; i++) {
+      //const res = getRandomIntInclusive(0, h);
+      //if (r[res]) {
+        //r[res]++;
+      //} else r[res] = 1;
+   // }
+    //let k = "";
+    //let m = 0;
+    //console.log(r);
+    //for (const key in r) {
+      //console.log(key);
+      //if (m < r[key]) {
+        //m = r[key];
+        //k = key;
+     // }
+    //}
+    //console.log(k);
+   // console.log(m);
+    //console.log(level);
+    //return alco[k];
+  //};
 
   const addPlace = () => {
     if (ownPlace) {
@@ -85,6 +92,7 @@ export const Main = () => {
         id: v4(),
         image: defaultImagePlace,
         place: ownPlace,
+        music: defaultMusicPlace
       });
 
       setOwnPlace("");
