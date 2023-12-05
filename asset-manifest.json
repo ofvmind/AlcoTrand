@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AlcoTrand/static/css/main.66b16efc.css",
-    "main.js": "/AlcoTrand/static/js/main.3ff0c68e.js",
+    "main.css": "/AlcoTrand/static/css/main.0b17d6bf.css",
+    "main.js": "/AlcoTrand/static/js/main.473cd9f4.js",
     "static/media/fc.mp3": "/AlcoTrand/static/media/fc.e54b55881720be8fb6a7.mp3",
     "static/media/test.mp3": "/AlcoTrand/static/media/test.33c2fe16acc0cce1b032.mp3",
     "static/media/Vyshnya.mp3": "/AlcoTrand/static/media/Vyshnya.7012830f6dcfbf4e7b98.mp3",
@@ -24,11 +24,11 @@
     "static/media/FC.jpg": "/AlcoTrand/static/media/FC.385577399542cb2da34b.jpg",
     "static/media/click.mp3": "/AlcoTrand/static/media/click.54ea44ff29f0f86f7f43.mp3",
     "index.html": "/AlcoTrand/index.html",
-    "main.66b16efc.css.map": "/AlcoTrand/static/css/main.66b16efc.css.map",
-    "main.3ff0c68e.js.map": "/AlcoTrand/static/js/main.3ff0c68e.js.map"
+    "main.0b17d6bf.css.map": "/AlcoTrand/static/css/main.0b17d6bf.css.map",
+    "main.473cd9f4.js.map": "/AlcoTrand/static/js/main.473cd9f4.js.map"
   },
   "entrypoints": [
-    "static/css/main.66b16efc.css",
-    "static/js/main.3ff0c68e.js"
+    "static/css/main.0b17d6bf.css",
+    "static/js/main.473cd9f4.js"
   ]
 }
