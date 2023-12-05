@@ -20,7 +20,7 @@ import musicPorterAkademgorodok from "../../music/places/PorterAkadem.mp3";
 import musicPolyana from "../../music/places/Polyana.mp3";
 
 export const alco = [
-  { id: 1, name: "Пиво", strength: "light" },
+  { id: 1, name: "Пиво", strength: "light", },
   { id: 2, name: "Шоти", strength: "light" },
   { id: 3, name: "Shake", strength: "light" },
   { id: 4, name: "Вино", strength: "light" },
@@ -43,14 +43,14 @@ export const alco = [
 ];
 
 export const places = [
-  { id: 1, place: "Борщагівка", image: borschagovka, music: musicBorschagovka },
-  { id: 2, place: "Відрадний", image: vidredniy, music: musicVidradniy },
-  { id: 3, place: "Вишневе", image: vyshneve, music: musicVyshnya },
-  { id: 4, place: "Парк Совки", image: Sovki, music: musicTest },
-  { id: 5, place: "Легенда ФК", image: FC, music: musicFc },
-  { id: 6, place: "Портер", image: PorterAkadem, music: musicPorterAkademgorodok,},
-  { id: 7, place: "Бар79", image: TayneMisce, music: musicTest },
-  { id: 8, place: "Центр", image: Chreschatik, music: musicTest },
-  { id: 9, place: "ГідроПарк", image: Gidropark, music: musicTest },
-  { id: 10, place: "Поляна", image: Polyana, music: musicPolyana },
+  { id: 1, place: "Борщагівка", image: borschagovka, music: musicBorschagovka, included: true},
+  { id: 2, place: "Відрадний", image: vidredniy, music: musicVidradniy, included: true },
+  { id: 3, place: "Вишневе", image: vyshneve, music: musicVyshnya, included: true },
+  { id: 4, place: "Парк Совки", image: Sovki, music: musicTest, included: true },
+  { id: 5, place: "Легенда ФК", image: FC, music: musicFc, included: true },
+  { id: 6, place: "Портер", image: PorterAkadem, music: musicPorterAkademgorodok,  included: true},
+  { id: 7, place: "Бар79", image: TayneMisce, music: musicTest, included: true },
+  { id: 8, place: "Центр", image: Chreschatik, music: musicTest, included: true },
+  { id: 9, place: "ГідроПарк", image: Gidropark, music: musicTest, included: true },
+  { id: 10, place: "Поляна", image: Polyana, music: musicPolyana, included: true },
 ];
