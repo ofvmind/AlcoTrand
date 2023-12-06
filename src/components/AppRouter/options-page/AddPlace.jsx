@@ -29,8 +29,8 @@ export const AddPlace = ({ setOptionVar, places, setPlaces }) => {
         value={place}
         onChange={(e) => setPlace(e.target.value)}
       />
-      {place && <button onClick={add}>Додати</button>}
-      <button onClick={() => setOptionVar("")}>Повернутись</button>
+      {place && <button className="btn" onClick={add}>Додати</button>}
+      <button className="btn" onClick={() => setOptionVar("")}>Повернутись</button>
     </div>
   );
 };

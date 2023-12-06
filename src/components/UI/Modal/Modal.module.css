@@ -7,7 +7,10 @@
   width: 380px;
   margin: 0 auto;
   display: none;
-  background-color: #ccc;
+  background: url(../../../images/places/1646943847_3-abrakadabra-fun-p-oboi-na-telefon-s-alkogolem-4.jpg) no-repeat;
+  background-position: center;
+  background-attachment: center;
+  background-size: cover;
   z-index: 9999;
   animation: show .3s;
 }

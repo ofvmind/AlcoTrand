@@ -143,9 +143,13 @@ body {
 }
 
 .options {
-  margin-left: 220px;
+  margin: 20px 0 0 270px;
   font-size: 25px;
+  font-weight: bold;
   background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .options__bar {
@@ -167,10 +171,39 @@ body {
   }
 }
 
-button {
-  width: 205px;
+.places__list {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  span {
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    padding: 2px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.delete {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(78, 32, 5, .6);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+.btn {
+  width: 250px;
   font-size: 35px;
-  background-color: blue;
+  background-color: rgba(78, 32, 5, .6);
   border-radius: 15px;
   border: none;
   font-weight: bold;
@@ -181,13 +214,16 @@ button {
   animation: appearance .4s;
 }
 
-.places__list {
-  margin-top: 50px;
+.place__item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  span {
-    font-size: 25px;
-    font-weight: bold;
+}
+
+.alcoset {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    font-size: 30px;
+    flex: 1 0 50%;
   }
 }

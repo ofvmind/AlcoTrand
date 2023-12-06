@@ -1,7 +1,7 @@
 import { useState } from "react";
 import cl from "./Modal.module.css";
 
-export const Modal = ({visible, setVisible, children}) => {
+export const Modal = ({visible, setVisible, setOptionVar, children}) => {
   const [hide, setHide] = useState(false);
 
   const rootClasses = [cl.modal];
@@ -11,6 +11,7 @@ export const Modal = ({visible, setVisible, children}) => {
   const hideModal = () => {
     setHide(true);
     setTimeout(() => {
+      setOptionVar('');
       setVisible(false);
       setHide(false);
     } ,250);
@@ -19,7 +20,7 @@ export const Modal = ({visible, setVisible, children}) => {
   return (
     <div className={rootClasses.join(' ')}>
       {children}
-      <button onClick={hideModal}>Закрити</button>
+      <button className="btn" onClick={hideModal}>Закрити</button>
     </div>
   );
 };
