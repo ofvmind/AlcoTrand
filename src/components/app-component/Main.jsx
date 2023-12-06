@@ -128,6 +128,7 @@ export const Main = () => {
   const [button, setButton] = useState("Гоу");
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [optionVar, setOptionVar] = useState("");
+  const [emptyPlaces, setEmptyPlaces] = useState(false);
 
   function clickAudio() {
     const audio = new Audio(clickSound);
@@ -137,6 +138,11 @@ export const Main = () => {
   const includedPlaces = places.filter((place) => place.included === true);
 
   function Loading() {
+    if (!includedPlaces.length) {
+      setEmptyPlaces(true);
+      setTimeout(() => setEmptyPlaces(false), 1500);
+      return;
+    }
     if (button === "Гоу") {
       setClicked(true);
       start();
@@ -165,6 +171,7 @@ export const Main = () => {
     if (hard) alcoSet = alco.filter((item) => item.strength === "hard");
     else alcoSet = alco.filter((item) => item.strength === "light");
     alcoSet = alcoSet.filter(item => item.included === true);
+    if (!alcoSet.length) return "пусто";
     return alcoSet[getRandomIntInclusive(0, alcoSet.length)].name;
   };
 
@@ -210,6 +217,7 @@ export const Main = () => {
           </button>
         )}
         <div className="center">
+          {emptyPlaces && <p className="attention">Добавте хоча би, одек місце</p>}
           {clicked ? (
             <>
               <StartButton>
