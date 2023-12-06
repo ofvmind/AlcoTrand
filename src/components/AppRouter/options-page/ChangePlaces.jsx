@@ -24,8 +24,9 @@ export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
               checked={place.included}
               type="checkbox"
               key={place.id}
+              id={place.id}
             />
-            {place.place}
+            <label for={place.id}>{place.place}</label>
 
             <button className="delete" onClick={() => removePlace(place.id)}>&times;</button>
           </span>

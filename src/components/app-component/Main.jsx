@@ -205,7 +205,7 @@ export const Main = () => {
       />
       <div className="wrapper">
         {!clicked && (
-          <button class="options" onClick={() => setModalIsOpen(true)}>
+          <button className="options" onClick={() => setModalIsOpen(true)}>
             ОпціЇ
           </button>
         )}
