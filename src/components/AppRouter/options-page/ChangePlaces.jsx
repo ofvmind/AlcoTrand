@@ -15,10 +15,10 @@ export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
   };
 
   return (
-    <div className="places__list">
+    <div className="__list">
       {places.map((place) => (
-        <div className="place__item">
-          <span>
+        <div className="__item">
+          
             <input
               onChange={onToggle.bind("", place.id)}
               checked={place.included}
@@ -27,9 +27,8 @@ export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
               id={place.id}
             />
             <label for={place.id}>{place.place}</label>
-
             <button className="delete" onClick={() => removePlace(place.id)}>&times;</button>
-          </span>
+          
         </div>
       ))}
       <button className="btn" onClick={() => setOptionVar("")}>Повернутись</button>
