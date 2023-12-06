@@ -19,7 +19,7 @@ export const Modal = ({visible, setVisible, children}) => {
   return (
     <div className={rootClasses.join(' ')}>
       {children}
-      <button onClick={hideModal}>Close</button>
+      <button onClick={hideModal}>Закрити</button>
     </div>
   );
 };

@@ -10,13 +10,13 @@ export const ChangePlaces = ({places, setPlaces, setOptionVar}) => {
   };
 
   return (
-    <div className="options__bar">
+    <div className="places__list">
       {places.map(place =>
           <>
             <span><input onChange={onToggle.bind('', place.id)} checked={place.included} type="checkbox" key={place.id}/>{place.place}</span>
           </>
         )}
-      <button onClick={() => setOptionVar('')}>Вийти</button>
+      <button onClick={() => setOptionVar('')}>Повернутись</button>
     </div>
   );
 };

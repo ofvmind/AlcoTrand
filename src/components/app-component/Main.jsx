@@ -59,14 +59,14 @@ export const Main = () => {
     audio.autoplay = true;
   }
 
-  const pp = places.filter(place => place.included === true);
+  const includedPlaces = places.filter(place => place.included === true);
 
   function Loading() {
     if (button === "Гоу") {
       setClicked(true);
       start();
       let intr = setInterval(() => {
-        setPicture(pp[Math.floor(Math.random() * pp.length)]);
+        setPicture(includedPlaces[Math.floor(Math.random() * includedPlaces.length)]);
       }, 2000);
       setTimeout(() => {
         setClicked(false);
