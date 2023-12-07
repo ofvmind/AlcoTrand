@@ -26,7 +26,7 @@ export const alcoData = [
   { id: 4, name: "Вино", strength: "light", included: true },
   { id: 5, name: "Сидр", strength: "light", included: true },
   { id: 6, name: "Джин Тонік", strength: "light", included: true },
-  { id: 7, name: "Крепе пиво", strength: "light", included: true },
+  { id: 7, name: "Крепке пиво", strength: "light", included: true },
   { id: 8, name: "Ель", strength: "light", included: true },
   { id: 9, name: "Шейк", strength: "light", included: true },
   { id: 10, name: "Лїкер", strength: "light", included: true },
@@ -40,6 +40,7 @@ export const alcoData = [
   { id: 18, name: "Скотч", strength: "hard", included: true },
   { id: 19, name: "Самогон", strength: "hard", included: true },
   { id: 20, name: "Коньяк", strength: "hard", included: true },
+  { id: 21, name: "Глінтвейн", strength: "light", included: true }
 ];
 
 export const placesData = [
