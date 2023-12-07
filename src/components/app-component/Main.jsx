@@ -54,6 +54,7 @@ export const Main = () => {
       setButton("Ще");
     } else {
       setButton("Гоу");
+      setPicture(temp[0]);
     }
   }
 
