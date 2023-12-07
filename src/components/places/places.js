@@ -27,8 +27,12 @@ import r4 from "../../images/places/random4.jpg";
 import r5 from "../../images/places/random5.jpg";
 import r6 from "../../images/places/random6.jpg";
 import r7 from "../../images/places/random7.jpg";
+import r8 from "../../images/places/random8.jpeg";
+import r9 from "../../images/places/random9.jpg";
+import r10 from "../../images/places/random10.jpg";
 
-export const images = [r1, r2, r3, r4, r5, r6, r7];
+
+export const images = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10];
 
 export const alcoData = [
   { id: 1, name: "Пиво", strength: "light", included: true },
@@ -43,7 +47,7 @@ export const alcoData = [
   { id: 10, name: "Лїкер", strength: "light", included: true },
   { id: 11, name: "Джин", strength: "light", included: true },
   { id: 12, name: "Зубровка", strength: "hard", included: true },
-  { id: 13, name: "Revo", strength: "hard", included: true },
+  { id: 13, name: "Revo", strength: "light", included: true },
   { id: 14, name: "Самбука", strength: "hard", included: true },
   { id: 15, name: "Водка", strength: "hard", included: true },
   { id: 16, name: "Абсент", strength: "hard", included: true },
