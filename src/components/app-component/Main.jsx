@@ -16,7 +16,7 @@ export const Main = () => {
 
   const [alco, setAlco] = useState([...alcoData]);
 
-  const [picture, setPicture] = useState(places[9]);
+  const [picture, setPicture] = useState(places[5]);
   const [clicked, setClicked] = useState(false);
   const [level, setLevel] = useState("random");
   const [button, setButton] = useState("Гоу");
