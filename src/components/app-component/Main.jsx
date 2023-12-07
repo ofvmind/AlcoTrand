@@ -61,21 +61,17 @@ export const Main = () => {
   }
 
   const randomAlco = (hard) => {
-    try {
       let alcoSet = [];
       if (hard) alcoSet = alco.filter((item) => item.strength === "hard");
       else alcoSet = alco.filter((item) => item.strength === "light");
       alcoSet = alcoSet.filter((item) => item.included === true);
       if (!alcoSet.length) return;
-      return alcoSet[getRandomIntInclusive(0, alcoSet.length)].name;
-    } catch (e) {
-      console.log(e);
-    }
+      return alcoSet[Math.floor(Math.random() * alcoSet.length)].name;
   };
 
-  function getRandomIntInclusive(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
-  }
+  //function getRandomIntInclusive(min, max) {
+    //return Math.floor(Math.random() * (max - min) + min); // The maximum is inclusive and the minimum is inclusive
+  //}
 
   return (
     <>
