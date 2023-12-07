@@ -34,6 +34,8 @@ import r10 from "../../images/places/random10.jpg";
 
 export const images = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10];
 
+export const temp = [{image: r4}];
+
 export const alcoData = [
   { id: 1, name: "Пиво", strength: "light", included: true },
   { id: 2, name: "Шоти", strength: "light", included: true },

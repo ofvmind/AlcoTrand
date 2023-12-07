@@ -10,13 +10,15 @@ import { AddPlace } from "../AppRouter/options-page/AddPlace";
 import { ChangePlaces } from "../AppRouter/options-page/ChangePlaces";
 import { alcoData, placesData } from "../places/places";
 import { AlcoOptions } from "../AppRouter/options-page/AlcoOption";
+//tempotart solution for start display image
+import { temp } from "../places/places";
 
 export const Main = () => {
   const [places, setPlaces] = useState([...placesData]);
 
   const [alco, setAlco] = useState([...alcoData]);
 
-  const [picture, setPicture] = useState(places[9]);
+  const [picture, setPicture] = useState(temp[0]);
   const [clicked, setClicked] = useState(false);
   const [level, setLevel] = useState("random");
   const [button, setButton] = useState("Гоу");
