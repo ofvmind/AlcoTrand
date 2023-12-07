@@ -61,12 +61,16 @@ export const Main = () => {
   }
 
   const randomAlco = (hard) => {
-    let alcoSet = [];
-    if (hard) alcoSet = alco.filter((item) => item.strength === "hard");
-    else alcoSet = alco.filter((item) => item.strength === "light");
-    alcoSet = alcoSet.filter(item => item.included === true);
-    if (!alcoSet.length) return;
-    return alcoSet[getRandomIntInclusive(0, alcoSet.length)].name;
+    try {
+      let alcoSet = [];
+      if (hard) alcoSet = alco.filter((item) => item.strength === "hard");
+      else alcoSet = alco.filter((item) => item.strength === "light");
+      alcoSet = alcoSet.filter((item) => item.included === true);
+      if (!alcoSet.length) return;
+      return alcoSet[getRandomIntInclusive(0, alcoSet.length)].name;
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   function getRandomIntInclusive(min, max) {
@@ -111,7 +115,9 @@ export const Main = () => {
           </button>
         )}
         <div className="center">
-          {emptyPlaces && <p className="attention">Добавте хоча би, одек місце</p>}
+          {emptyPlaces && (
+            <p className="attention">Добавте хоча би, одек місце</p>
+          )}
           {clicked ? (
             <>
               <StartButton>
