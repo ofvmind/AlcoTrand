@@ -39,10 +39,8 @@ import r16 from "../../images/places/random16.jpg";
 import r17 from "../../images/places/random17.jpg";
 import r18 from "../../images/places/random18.jpg";
 import r19 from "../../images/places/random19.jpg";
-import r20 from "../../images/places/random20.jpg";
 
-
-export const images = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19. r20];
+export const images = [r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r18, r19];
 
 export const temp = [{image: r4}];
 
