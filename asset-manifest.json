@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AlcoTrand/static/css/main.5172ccfa.css",
-    "main.js": "/AlcoTrand/static/js/main.752f03d3.js",
+    "main.js": "/AlcoTrand/static/js/main.97e95e29.js",
     "static/media/fc.mp3": "/AlcoTrand/static/media/fc.e54b55881720be8fb6a7.mp3",
     "static/media/test.mp3": "/AlcoTrand/static/media/test.33c2fe16acc0cce1b032.mp3",
     "static/media/Vyshnya.mp3": "/AlcoTrand/static/media/Vyshnya.7012830f6dcfbf4e7b98.mp3",
@@ -33,10 +33,10 @@
     "static/media/random19.jpg": "/AlcoTrand/static/media/random19.a062f06730c06b45900b.jpg",
     "index.html": "/AlcoTrand/index.html",
     "main.5172ccfa.css.map": "/AlcoTrand/static/css/main.5172ccfa.css.map",
-    "main.752f03d3.js.map": "/AlcoTrand/static/js/main.752f03d3.js.map"
+    "main.97e95e29.js.map": "/AlcoTrand/static/js/main.97e95e29.js.map"
   },
   "entrypoints": [
     "static/css/main.5172ccfa.css",
-    "static/js/main.752f03d3.js"
+    "static/js/main.97e95e29.js"
   ]
 }
