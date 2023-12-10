@@ -14,16 +14,13 @@ import { AlcoOptions } from "../AppRouter/options-page/AlcoOption";
 import { temp } from "../places/places";
 
 export const Main = () => {
-
-  let newPlaces = placesData;
-
   const [places, setPlaces] = useState(JSON.parse(localStorage.getItem('places')) || placesData);
+
   useEffect(() => {
     if (!localStorage.getItem('places')) {
       localStorage.setItem('places', JSON.stringify(placesData));
     } else {
       localStorage.setItem('places', JSON.stringify(places));
-      newPlaces = localStorage.getItem('places');
     }
   }, [places]);
 
