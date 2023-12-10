@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import music from "../../music/loading2.mp3";
 import clickSound from "../../music/click/click.mp3";
 import { StartButton } from "../UI/StartButton/StartButton";
@@ -14,7 +14,11 @@ import { AlcoOptions } from "../AppRouter/options-page/AlcoOption";
 import { temp } from "../places/places";
 
 export const Main = () => {
-  const [places, setPlaces] = useState([...placesData]);
+
+  if (!localStorage.getItem('places')) {
+    localStorage.setItem('places', JSON.stringify(placesData));
+  }
+  const [places, setPlaces] = useState(JSON.parse(localStorage.getItem('places')));
 
   const [alco, setAlco] = useState([...alcoData]);
 
@@ -25,6 +29,16 @@ export const Main = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [optionVar, setOptionVar] = useState("");
   const [emptyPlaces, setEmptyPlaces] = useState(false);
+
+  useEffect(() => {
+    if (!localStorage.getItem('places')) {
+      localStorage.setItem('places', JSON.stringify(placesData));
+    } else {
+      localStorage.setItem('places', JSON.stringify(places));
+      let newPlaces = localStorage.getItem('places');
+      setPlaces(JSON.parse(newPlaces))
+    }
+  }, [places]);
 
   function clickAudio() {
     const audio = new Audio(clickSound);
