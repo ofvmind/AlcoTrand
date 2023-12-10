@@ -106,7 +106,7 @@ export const Main = () => {
             setOptionVar={setOptionVar}
           />
         ) : (
-          <AlcoOptions alco={alco} setAlco={setAlco} />
+          <AlcoOptions alco={alco} setAlco={setAlco} optionVar={optionVar} setOptionVar={setOptionVar}/>
         )}
       </Modal>
       <div

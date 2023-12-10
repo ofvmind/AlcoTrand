@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FilterInput } from "../../UI/FilterInput/FilterInput";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-export const AlcoOptions = ({ alco, setAlco }) => {
+export const AlcoOptions = ({ alco, setAlco, optionVar, setOptionVar }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const onToggle = (id) => {
@@ -47,6 +47,7 @@ export const AlcoOptions = ({ alco, setAlco }) => {
               </CSSTransition>
             ))}
         </TransitionGroup>
+        <button className="btn-back" onClick={() => setOptionVar("")}>&#8828;</button>
       </div>
     </>
   );

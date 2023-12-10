@@ -54,8 +54,8 @@ export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
               </CSSTransition>
             ))}
         </TransitionGroup>
-        <button className="btn" onClick={() => setOptionVar("")}>
-          Повернутись
+        <button className="btn-back" onClick={() => setOptionVar("")}>
+          &#8828;
         </button>
       </div>
     </>
