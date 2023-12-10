@@ -15,10 +15,7 @@ import { temp } from "../places/places";
 
 export const Main = () => {
 
-  if (!localStorage.getItem('places')) {
-    localStorage.setItem('places', JSON.stringify(placesData));
-  }
-  const [places, setPlaces] = useState(JSON.parse(localStorage.getItem('places')));
+  const [places, setPlaces] = useState([...placesData]);
 
   const [alco, setAlco] = useState([...alcoData]);
 
@@ -29,16 +26,6 @@ export const Main = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [optionVar, setOptionVar] = useState("");
   const [emptyPlaces, setEmptyPlaces] = useState(false);
-
-  useEffect(() => {
-    if (!localStorage.getItem('places')) {
-      localStorage.setItem('places', JSON.stringify(placesData));
-    } else {
-      localStorage.setItem('places', JSON.stringify(places));
-      let newPlaces = localStorage.getItem('places');
-      setPlaces(JSON.parse(newPlaces))
-    }
-  }, [places]);
 
   function clickAudio() {
     const audio = new Audio(clickSound);
