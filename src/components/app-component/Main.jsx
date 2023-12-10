@@ -15,13 +15,12 @@ import { temp } from "../places/places";
 
 export const Main = () => {
 
-  let newPlaces;
+  let newPlaces = placesData;
 
-  const [places, setPlaces] = useState(JSON.parse(localStorage.getItem('places')));
+  const [places, setPlaces] = useState(JSON.parse(localStorage.getItem('places')) || placesData);
   useEffect(() => {
     if (!localStorage.getItem('places')) {
       localStorage.setItem('places', JSON.stringify(placesData));
-      newPlaces = placesData
     } else {
       localStorage.setItem('places', JSON.stringify(places));
       newPlaces = localStorage.getItem('places');
