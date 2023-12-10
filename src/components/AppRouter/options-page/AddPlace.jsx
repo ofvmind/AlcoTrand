@@ -28,11 +28,11 @@ export const AddPlace = ({ setOptionVar, places, setPlaces }) => {
 
   return (
     <div className="options__bar">
-      <p>Додати місце</p>
       <input
         type="text"
         value={place}
         onChange={(e) => setPlace(e.target.value)}
+        placeholder="Ваще місце"
       />
       {place && <button className="btn" onClick={add}>Додати</button>}
       <button className="btn" onClick={() => setOptionVar("")}>Повернутись</button>
