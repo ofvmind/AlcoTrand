@@ -15,16 +15,17 @@ import { temp } from "../places/places";
 
 export const Main = () => {
   const [places, setPlaces] = useState(JSON.parse(localStorage.getItem('places')) || placesData);
+  const [alco, setAlco] = useState(JSON.parse(localStorage.getItem('alco')) || alcoData);
 
   useEffect(() => {
-    if (!localStorage.getItem('places')) {
+    if (!localStorage.getItem('places') && !localStorage.getItem('alco')) {
       localStorage.setItem('places', JSON.stringify(placesData));
+      localStorage.setItem('alco', JSON.stringify(alcoData))
     } else {
       localStorage.setItem('places', JSON.stringify(places));
+      localStorage.setItem('alco', JSON.stringify(alco));
     }
-  }, [places]);
-
-  const [alco, setAlco] = useState([...alcoData]);
+  }, [places, alco]);
 
   const [picture, setPicture] = useState(temp[0]);
   const [clicked, setClicked] = useState(false);
