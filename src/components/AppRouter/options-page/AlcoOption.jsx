@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FilterInput } from "../../UI/FilterInput/FilterInput";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { BackButton } from "../../UI/BackButton/BackButton";
 
 export const AlcoOptions = ({ alco, setAlco, optionVar, setOptionVar }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -16,11 +17,15 @@ export const AlcoOptions = ({ alco, setAlco, optionVar, setOptionVar }) => {
 
   return (
     <>
-      <FilterInput
-        query={searchQuery}
-        setQuery={setSearchQuery}
-        placeholder="Пошук"
-      />
+      <div className="navigation">
+        <BackButton onClick={() => setOptionVar("")}/>
+        <FilterInput
+          query={searchQuery}
+          setQuery={setSearchQuery}
+          placeholder="Пошук"
+        />
+      </div>
+
       <div className="__list">
         <TransitionGroup>
           {alco
@@ -47,7 +52,6 @@ export const AlcoOptions = ({ alco, setAlco, optionVar, setOptionVar }) => {
               </CSSTransition>
             ))}
         </TransitionGroup>
-        <button className="btn-back" onClick={() => setOptionVar("")}>&#8828;</button>
       </div>
     </>
   );

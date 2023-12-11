@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FilterInput } from "../../UI/FilterInput/FilterInput";
+import { BackButton } from "../../UI/BackButton/BackButton";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
@@ -21,11 +22,14 @@ export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
 
   return (
     <>
-      <FilterInput
-        query={searchQuery}
-        setQuery={setSearchQuery}
-        placeholder="Пошук"
-      />
+      <div className="navigation">
+        <BackButton onClick={() => setOptionVar("")}/>
+        <FilterInput
+          query={searchQuery}
+          setQuery={setSearchQuery}
+          placeholder="Пошук"
+        />
+      </div>
       <div className="__list">
         <TransitionGroup>
           {places
@@ -54,9 +58,6 @@ export const ChangePlaces = ({ places, setPlaces, setOptionVar }) => {
               </CSSTransition>
             ))}
         </TransitionGroup>
-        <button className="btn-back" onClick={() => setOptionVar("")}>
-          &#8828;
-        </button>
       </div>
     </>
   );
