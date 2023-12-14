@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AlcoTrand/static/css/main.ae1e5e86.css",
-    "main.js": "/AlcoTrand/static/js/main.f48eea22.js",
+    "main.js": "/AlcoTrand/static/js/main.6682db01.js",
     "static/media/fc.mp3": "/AlcoTrand/static/media/fc.e54b55881720be8fb6a7.mp3",
     "static/media/test.mp3": "/AlcoTrand/static/media/test.33c2fe16acc0cce1b032.mp3",
     "static/media/Vyshnya.mp3": "/AlcoTrand/static/media/Vyshnya.7012830f6dcfbf4e7b98.mp3",
@@ -14,9 +14,9 @@
     "static/media/random6.jpg": "/AlcoTrand/static/media/random6.52321a44ab2c010f52d9.jpg",
     "static/media/random8.jpeg": "/AlcoTrand/static/media/random8.13fee841642264181e00.jpeg",
     "static/media/random13.jpg": "/AlcoTrand/static/media/random13.4738c801293b6de6561e.jpg",
-    "static/media/loading2.mp3": "/AlcoTrand/static/media/loading2.de383bdb3643e1a2c7e0.mp3",
     "static/media/random18.jpg": "/AlcoTrand/static/media/random18.0f895aab874fc9b9a6ed.jpg",
     "static/media/Chreschatik.jpg": "/AlcoTrand/static/media/Chreschatik.c88570f32eb0c007876c.jpg",
+    "static/media/loading.mp3": "/AlcoTrand/static/media/loading.f0503ace5828192dd0cc.mp3",
     "static/media/otradniy.jpg": "/AlcoTrand/static/media/otradniy.c6f375f2317e2afe0510.jpg",
     "static/media/random7.jpg": "/AlcoTrand/static/media/random7.9257ef00fb2cb9687b96.jpg",
     "static/media/1646943847_3-abrakadabra-fun-p-oboi-na-telefon-s-alkogolem-4.jpg": "/AlcoTrand/static/media/1646943847_3-abrakadabra-fun-p-oboi-na-telefon-s-alkogolem-4.b98f0d4330a43c8302bb.jpg",
@@ -33,10 +33,10 @@
     "static/media/random19.jpg": "/AlcoTrand/static/media/random19.a062f06730c06b45900b.jpg",
     "index.html": "/AlcoTrand/index.html",
     "main.ae1e5e86.css.map": "/AlcoTrand/static/css/main.ae1e5e86.css.map",
-    "main.f48eea22.js.map": "/AlcoTrand/static/js/main.f48eea22.js.map"
+    "main.6682db01.js.map": "/AlcoTrand/static/js/main.6682db01.js.map"
   },
   "entrypoints": [
     "static/css/main.ae1e5e86.css",
-    "static/js/main.f48eea22.js"
+    "static/js/main.6682db01.js"
   ]
 }
