@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import music from "../../music/loading2.mp3";
+import music from "../../music/loading.mp3";
 import clickSound from "../../music/click/click.mp3";
 import { StartButton } from "../UI/StartButton/StartButton";
 import { Loader } from "../UI/Loader/Loader";
