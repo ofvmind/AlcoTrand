@@ -55,11 +55,11 @@ export const Main = () => {
         setPicture(
           includedPlaces[Math.floor(Math.random() * includedPlaces.length)]
         );
-      }, 2000);
+      }, 1500);
       setTimeout(() => {
         setClicked(false);
         clearInterval(intr);
-      }, 14000);
+      }, 15000);
       setButton("Ще");
     } else {
       setButton("Гоу");
@@ -110,13 +110,9 @@ export const Main = () => {
           <AlcoOptions alco={alco} setAlco={setAlco} optionVar={optionVar} setOptionVar={setOptionVar}/>
         )}
       </Modal>
-      <div
-        className="app-background"
-        style={{
+      <div className="wrapper"  style={{
           backgroundImage: `url(${picture.image})`,
-        }}
-      />
-      <div className="wrapper">
+        }}>
         {!clicked && (
           <button className="options" onClick={() => setModalIsOpen(true)}>
             ОпціЇ

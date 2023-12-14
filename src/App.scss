@@ -14,7 +14,7 @@ body {
   background-color: #000;
 }
 
-.app-background {
+.wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -29,12 +29,7 @@ body {
   transition: .5s;
   animation: appearance .5s;
   z-index: -999;
-}
-
-.wrapper {
-  margin: 0 auto;
-  width: 380px;
-  animation: appearance .5s;
+  overflow-y: auto;
 }
 
 .levels {
@@ -119,7 +114,7 @@ body {
 .place-name {
   color: #fff;
   font-size: 40px;
-  margin: 50px 0 0 130px;
+  margin: 200px 0 0 130px;
   text-shadow: 2px 2px 5px #000;
   animation: loading 1.5s infinite linear;
 }

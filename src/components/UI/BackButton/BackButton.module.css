@@ -1,10 +1,10 @@
 .btnBack {
-    font-size: 40px;
-    border: none;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    background-color: rgb(78, 32, 5);
-    cursor: pointer;
-    color: #fff;
-  }
+  font-size: 40px;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background-color: rgb(78, 32, 5);
+  cursor: pointer;
+  color: #fff;
+}
