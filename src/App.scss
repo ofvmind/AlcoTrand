@@ -7,10 +7,10 @@
   font-family: sans-serif;
   text-decoration: none;
   list-style: none;
-  font-family: 'Satisfy', cursive;
 }
 
 body {
+  font-family: arial;  
   background-color: #000;
 }
 
@@ -36,6 +36,7 @@ body {
   position: fixed;
   top: 150px;
   color: #fff;
+  font-family: 'Satisfy', cursive;
   p {
     font-size: 45px;
     font-weight: bold;
